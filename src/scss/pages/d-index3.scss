@@ -1,0 +1,149 @@
+.main{
+  color: $white;
+}
+
+.main-slider{
+  position: relative;
+  &__nav{
+    position: absolute;
+    left: 0;
+    bottom: 4em;
+    width: 100%;
+    z-index: 3;
+  }
+  .slider-controls{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+  }
+  .slider-arrow{
+    width: 3.875em;
+    display: flex;
+    align-items: center;
+    img{
+      width: 100%;
+    }
+  }
+  .swiper-pagination{
+    position: static;
+    width: auto;
+    @include sameNumWidth;
+  }
+  .slider-fraction-sep,
+  .slider-fraction-curr{
+    font-size: 1.375em;
+    letter-spacing: -0.01em;
+  }
+  .slider-fraction-tot{
+    color: #969696;
+    font-size: 1em;
+    letter-spacing: -0.01em;
+  }
+  .swiper-slide {
+    position: relative;
+    overflow: hidden;
+    background: #111; /* фон, пока грузится */
+  }
+
+  .slide-media {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    display: block;
+  }
+
+  .slide-media.is-loaded {
+    opacity: 1;
+  }
+
+  /* прелоадер-спиннер */
+  .slide-loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2.25em;
+    height: 2.25em;
+    margin: -1.125em 0 0 -1.125em;
+    border: 3px solid rgba(255, 255, 255, 0.25);
+    border-top-color: $white;
+    border-radius: 50%;
+    animation: slide-spin 0.8s linear infinite;
+    z-index: 1;
+  }
+
+  .slide-loader.is-hidden {
+    display: none;
+    &~.main-card__content{
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-spin {
+    to { transform: rotate(360deg); }
+  }
+}
+
+.main-card{
+  position: relative;
+  &__img{
+    @include imgCover(57.1%);
+  }
+  &__content{
+    position: absolute;
+    left: 0;
+    bottom: 50%;
+    transform: translateY(90%);
+    width: 100%;
+    opacity: 0;
+  }
+  &__text{
+    max-width: 39em;
+    @include grid100gap(1em);
+  }
+  &__desc{
+    font-size: 1.5em;
+    line-height: 130%;
+    max-width: 20em;
+  }
+}
+
+
+@media screen and (max-width: 992px){
+  .main-slider{
+    &__nav{
+      bottom: 1.875em;
+    }
+    .slider-arrow{
+      width: 2.875em;
+    }
+    .slider-fraction-sep,
+    .slider-fraction-curr{
+      font-size: 1.125em;
+    }
+    .slider-fraction-tot{
+      font-size: .875em;
+    }
+  }
+
+  .main-card{
+    &__content{
+      bottom: 8.5em;
+      transform: unset;
+    }
+    &__text{
+      max-width: 21.875em;
+      gap: .5em;
+    }
+    &__desc{
+      font-size: 1.125em;
+    }
+  }
+}
+
+
+@media screen and (max-width: 576px){
+  .main-card{
+    &__img{
+      padding-bottom: 150%;
+    }
+  }
+}

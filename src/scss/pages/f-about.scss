@@ -1,0 +1,174 @@
+.about-partner{
+  &__grid{
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+  &__col{
+    padding: 2.75em 6em 3.5em 3.75em;
+    background-color: $black;
+    color: $white;
+  }
+  &__logo{
+    width: 8.75em;
+    display: block;
+    margin-bottom: 6.25em;
+  }
+  &__img{
+    display: block;
+    width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+  }
+  &__desc{
+    margin-top: 1.5em;
+  }
+}
+
+.about-competence{
+  &__grid{
+    display: grid;
+    grid-template-columns: 18.5em calc(100% - 20em);
+    gap: 1.5em;
+    padding-bottom: 5em;
+    border-bottom: .125em solid $black;
+  }
+  &__items{
+    display: grid;
+    grid-template-columns: 28.25em 22.625em;
+    grid-template-rows: repeat(4, auto);
+    justify-content: space-between;
+    gap: 1.875em;
+    grid-auto-flow: column;
+  }
+  &__item{
+    display: grid;
+    grid-template-columns: 3em calc(100% - 4em);
+    gap: 1em;
+    align-items: flex-start;
+    text-transform: uppercase;
+    &-num{
+      display: inline-flex;
+      justify-content: space-between;
+      margin-right: auto;
+      min-width: 2.33em;
+    }
+    &-num,
+    &-text{
+      font-size: 1.125em;
+      line-height: 150%;
+      font-weight: 600;
+      letter-spacing: .04em;
+    }
+  }
+}
+
+.solutions-slider{
+  margin-top: 2em;
+  .swiper-container{
+    width: calc(100% + 1.25em);
+  }
+  .swiper-slide{
+    width: 25%;
+    padding-right: 1.25em;
+  }
+}
+
+.solution-card{
+  padding: 1.25em 1.5em 2em;
+  background: #F6F5F2;
+  height: 100%;
+  &__icon{
+    height: 5em;
+    margin-bottom: 5.5em;
+  }
+  &__title{
+    min-height: 2.66em;
+  }
+  &__desc{
+    margin-top: .625em;
+  }
+}
+
+.about-growth{
+  .about-partner__col{
+    display: flex;
+    flex-direction: column;
+    @media screen and (min-width: 993px){
+      padding-right: 5em;
+    }
+  }
+  .about-partner__col2{
+    order: -1;
+  }
+  .about-partner__desc{
+    padding-top: 2.5em;
+    margin-top: auto;
+  }
+}
+
+
+@media screen and (max-width: 992px){
+  .about-partner{
+    &__col{
+      padding: 2em 1.25em;
+    }
+    &__logo{
+      width: 6.75em;
+      margin-bottom: 5em;
+    }
+    &__desc{
+      margin-top: 1em;
+    }
+  }
+
+  .about-competence{
+    &__grid{
+      padding-bottom: 2.25em;
+    }
+    &__items{
+      grid-template-columns: 100%;
+      grid-template-rows: unset;
+      grid-auto-flow: unset;
+    }
+    &__item{
+      font-size: .78em;
+    }
+  }
+
+  .about-solutions{
+    overflow: hidden;
+  }
+
+  .solutions-slider{
+    margin-top: 1em;
+    .slider__wrap{
+      overflow: unset;
+    }
+    .swiper-container{
+      width: calc(100% + 1em);
+    }
+    .swiper-slide{
+      width: 18.625em;
+      padding-right: 1em;
+    }
+    .swiper-nav{
+      display: none;
+    }
+  }
+
+}
+
+
+@media screen and (max-width: 576px){
+  .about-partner{
+    &__grid{
+      grid-template-columns: 100%;
+    }
+  }
+
+  .about-competence {
+    &__grid {
+      grid-template-columns: 100%;
+    }
+  }
+}

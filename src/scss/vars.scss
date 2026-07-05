@@ -1,0 +1,16 @@
+:root {
+    --vh: 1vh;
+}
+
+$font2:'Proxima Nova', sans-serif;
+$font1:'Onest', sans-serif;
+$black: #222222;
+$dark: #444444;
+$white: #fff;
+$gray: #999;
+$gray2: #888;
+$primary: #FC0;
+$secondary: blue;
+$vh: calc(100 * var(--vh));
+$border: 1px solid #E2E0DB;
+$border2: 1px solid $black;

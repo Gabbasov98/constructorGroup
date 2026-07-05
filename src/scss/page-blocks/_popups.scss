@@ -1,0 +1,84 @@
+.modal-bg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: $vh;
+    background-color: $black;
+    opacity: .5;
+}
+
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: calc(100 * var(--vh));
+    overflow-y: auto;
+    z-index: 80;
+    opacity: 0;
+    pointer-events: none;
+    //transition: all .3s;
+    padding: 1em 0;
+    text-align: center;
+
+    &:after {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+        margin-right: -4px;
+    }
+    &__dialog {
+        text-align: left;
+        vertical-align: middle;
+    }
+
+    &._active {
+        opacity: 1;
+        pointer-events: unset;
+        .modal__bg {
+            display: block;
+        }
+    }
+    &__dialog {
+        background: #fff;
+        width: 67em;
+        max-width: calc(100% - 2em);
+        position: relative;
+        z-index: 3;
+        padding: 3em;
+        border-radius: 1.5em;
+        display: inline-block;
+    }
+    &__top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .close-btn{
+        width: 1.5em;
+        @include center;
+        margin-left: 1em;
+        flex-shrink: 0;
+    }
+}
+
+
+
+@media screen and (max-width: 992px){
+    .modal{
+        &__dialog {
+
+        }
+    }
+}
+
+
+@media screen and (max-width: 576px){
+    .modal{
+        &__dialog {
+
+        }
+    }
+}

@@ -1,0 +1,147 @@
+@import "vars";
+
+@mixin font-face($name, $file, $weight: 400, $style: normal) {
+    @font-face {
+        font-family: "#{$name}";
+        src: url('../fonts/#{$file}.woff') format('woff'),
+        url('../fonts/#{$file}.woff2') format('woff2');
+        font-weight: $weight;
+        font-style: $style;
+        font-display: swap;
+    }
+}
+
+@mixin scroll {
+    &::-webkit-scrollbar {
+        width: 0.1875em;
+        height: 0.1875em;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+        border-radius: 0;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #000;
+    }
+}
+
+@mixin imgCover($padding) {
+    position: relative;
+    padding-bottom: $padding;
+    display: block;
+    video,
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: inherit;
+    }
+}
+
+@mixin imgCover2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+@mixin truncate($count) {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: $count;
+    -webkit-box-orient: vertical;
+}
+
+@mixin truncateLine() {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+@mixin grid100gap($gap) {
+    display: grid;
+    grid-template-columns: 100%;
+    gap: $gap;
+}
+
+@mixin center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin centerAbsolute {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin bgImgSize($size) {
+    background-size: $size auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@mixin lastM($px) {
+    &:not(:last-child) {
+        margin: $px;
+    }
+}
+
+@mixin fullScreen {
+    width: calc(100% + 1.875em);
+    padding-left: .9375em;
+    padding-right: .9375em;
+    margin-left: -.9375em;
+}
+
+@mixin sameNumWidth {
+    font-variant-numeric: tabular-nums;
+    -webkit-font-feature-settings: "tnum";
+    font-feature-settings: "tnum";
+}
+
+@mixin fullScroll {
+    @include fullScreen;
+    overflow-x: auto;
+
+    &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+    }
+}
+
+@mixin menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: $vh;
+    width: 21.875em;
+    background: #FFF;
+    overflow-y: auto;
+    z-index: 21;
+    padding: 3.125em 0;
+    transition: all .5s;
+    transform: translateX(-120%);
+}
+
+@mixin removeSelectArrow {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+
+    &::-ms-expand {
+        display: none; // IE
+    }
+}

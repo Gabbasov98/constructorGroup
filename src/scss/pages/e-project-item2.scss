@@ -1,0 +1,168 @@
+.project-progress{
+  &__top{
+    padding-right: 6.75em;
+  }
+}
+
+.progress-slider{
+  margin-top: 2em;
+  .swiper-slide{
+    width: auto;
+    max-width: 95%;
+  }
+}
+
+.progress-card{
+  position: relative;
+  display: block;
+  &__text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: .75em 1em;
+    color: $white;
+  }
+  &__img{
+    height: 21.875em;
+    width: 100%;
+    img{
+      object-fit: cover;
+      max-width: 100%;
+      width: auto;
+      height: 100%;
+      display: block;
+    }
+  }
+}
+
+.online-cameras{
+  &__link{
+    display: flex;
+    align-items: center;
+    color: #888888;
+    &:hover{
+      color: #888888;
+    }
+    img{
+      width: 2.125em;
+      margin: 0 1em;
+      &:first-child{
+        margin-left: 0;
+      }
+      &:last-child{
+        margin-right: 0;
+      }
+    }
+    span{
+      font-size: .875em;
+      letter-spacing: -.06em;
+    }
+  }
+}
+
+.cameras-slider{
+  margin-top: 2em;
+  .swiper-container{
+    width: calc(100% + 1.25em);
+  }
+  .swiper-slide{
+    width: 50%;
+    padding-right: 1.25em;
+  }
+  .swiper-pagination{
+    display: none;
+  }
+}
+
+.camera-card{
+  display: block;
+  position: relative;
+  &__img{
+    @include imgCover(56.3%);
+  }
+  &__content{
+    @include centerAbsolute;
+    padding-top: 2em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $white;
+    img{
+      width: 3.75em;
+      margin-bottom: 1em;
+    }
+  }
+  &__icon{
+    position: absolute;
+    top: 1.5em;
+    left: 1.25em;
+    z-index: 2;
+    width: 2.1875em;
+  }
+}
+
+
+@media screen and (max-width: 992px){
+  .progress-slider{
+    margin-top: 1.625em;
+    .swiper-nav{
+      display: none;
+    }
+  }
+
+  .progress-card{
+    &__text{
+      padding: .875em;
+    }
+    &__img{
+      height: 17.5em;
+    }
+  }
+
+  .online-cameras{
+    &__link{
+      img{
+        margin: 0 .875em;
+      }
+      span{
+        font-size: .8125em;
+      }
+    }
+  }
+
+  .cameras-slider{
+    margin-top: 1em;
+    .swiper-nav{
+      display: none;
+    }
+    .swiper-slide{
+      width: 100%;
+    }
+    .swiper-pagination{
+      margin-top: .625em;
+      @include center;
+    }
+  }
+
+  .camera-card{
+    &__content{
+      padding: 0;
+      img{
+        width: 3.125em;
+        margin-bottom: .625em;
+      }
+    }
+    &__icon{
+      top: 1em;
+      left: .8125em;
+      z-index: 2;
+      width: 1.625em;
+    }
+  }
+}
+
+
+@media screen and (max-width: 576px){
+
+}

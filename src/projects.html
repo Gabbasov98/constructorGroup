@@ -1,0 +1,67 @@
+<!DOCTYPE html> @@include('components/page-blocks/_head.html',{ "lang":"ru", "title":"Главная", "description":"", "keywords":"",})
+
+<body class="m-page">
+    <div class="wrapper">
+        <header class="header">
+            @@include('components/page-blocks/_header.html')
+        </header>
+        <main class="content">
+
+                <div class="projects m-section _first _last">
+                    <div class="container">
+                        <h1 class="m-title h4 anim-newSing anim-newSing--transform">
+                            ПРОЕКТЫ
+                        </h1>
+                        <div class="projects__grid _mt24">
+                            @@include('components/cards/_project-card.html',{
+                            "img":"project-img",
+                            "title":"VESPER КУТУЗОВСКИЙ",
+                            "desc":"ЖИЛОЙ КОМПЛЕКС",
+                            "badge":"В реализации",
+                            })
+                            @@include('components/cards/_project-card.html',{
+                            "img":"project-img2",
+                            "title":"LIGHT CITY",
+                            "desc":"ДЕЛОВОЙ ЦЕНТР",
+                            "badge":"В реализации",
+                            })
+                            @@include('components/cards/_project-card.html',{
+                            "img":"project-img3",
+                            "title":"COSMOS",
+                            "desc":"ГОСТИНИЦА",
+                            "badge":"",
+                            })
+                            @@include('components/cards/_project-card.html',{
+                            "img":"project-img4",
+                            "title":"BRODSKY",
+                            "desc":"ЖИЛОЙ ДОМ",
+                            "badge":"",
+                            })
+                            @@include('components/cards/_project-card.html',{
+                            "img":"project-img5",
+                            "title":"VESPER TVERSKAYA",
+                            "desc":"АППАРТАМЕНТЫ DE LUXE",
+                            "badge":"",
+                            })
+                            @@include('components/cards/_project-card.html',{
+                            "img":"project-img6",
+                            "title":"LUCKY",
+                            "desc":"ЖИЛОЙ КОМПЛЕКС",
+                            "badge":"",
+                            })
+                        </div>
+                    </div>
+                </div>
+
+
+
+        </main>
+        <footer class="footer">
+            @@include('components/page-blocks/_footer.html')
+        </footer>
+    </div>
+
+    @@include('components/page-blocks/_scripts.html')
+</body>
+
+</html>

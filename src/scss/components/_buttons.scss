@@ -1,0 +1,102 @@
+@import "../vars";
+.m-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all ease-out .225s;
+    padding: 0 1.625em;
+    height: 3.5em;
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+.arrow-btn{
+    display: flex;
+    align-items: center;
+    img{
+        margin-left: .875em;
+        width: 2.0625em;
+        transition: all .3s;
+    }
+    &:hover{
+        img{
+            transform: translateX(.25em);
+        }
+    }
+    ._view2{
+        display: none;
+    }
+    &._gray{
+        font-weight: 400;
+        color: $gray2;
+        span{
+            letter-spacing: .06em;
+        }
+    }
+}
+
+.arrow-btn2{
+    font-weight: 600;
+    text-transform: uppercase;
+    span{
+        font-size: 1.25em;
+        line-height: 120%;
+        letter-spacing: .04em;
+    }
+}
+
+.m-btn-black-outline{
+    border: 1.5px solid $black;
+    color: $black;
+    &:hover{
+        color: $black;
+        background-color: rgba($black,.05);
+        opacity: .9;
+    }
+}
+
+.m-btn-yellow-outline{
+    border: 1.5px solid $primary;
+    color: $black;
+    &:hover{
+        color: $black;
+        background-color: rgba($primary,.05);
+        opacity: .9;
+    }
+}
+
+.line-link,
+.nav a{
+    border-bottom: 1px solid transparent;
+    &:hover{
+        color: $black;
+        border-color: $primary;
+    }
+}
+
+.line-link._yellow{
+    border-color: $primary;
+}
+
+
+@media screen and (max-width: 992px){
+
+}
+
+
+@media screen and (max-width: 576px){
+    .arrow-btn{
+        ._view1{
+            display: none;
+        }
+        ._view2{
+            display: block;
+        }
+        &._gray{
+            span{
+                font-size: .8125em;
+            }
+        }
+    }
+}

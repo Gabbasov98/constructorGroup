@@ -1,0 +1,55 @@
+.header{
+  z-index: 10;
+  border-bottom: $border;
+  position: relative;
+  height: 5.625em;
+  &__logo{
+    @include centerAbsolute;
+    display: block;
+    flex-shrink: 0;
+    width: 15.625em;
+    img{
+      width: 100%;
+      display: block;
+    }
+    ._view2{
+      display: none;
+    }
+  }
+}
+
+.header-white{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-color: rgba(255, 255, 255, 0.50);
+  .header__logo{
+    ._view1{
+      display: none;
+    }
+    ._view2{
+      display: block;
+    }
+  }
+}
+
+.burger{
+  display: none;
+}
+
+
+@media screen and (max-width: 992px){
+  .header{
+    height: 4.25em;
+    &__logo{
+      width: 12.25em;
+    }
+  }
+
+}
+
+
+@media screen and (max-width: 576px){
+
+}

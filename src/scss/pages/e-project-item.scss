@@ -1,0 +1,227 @@
+.project-main{
+  padding-bottom: 2.5em;
+  padding-top: 5.75em;
+  &__top{
+    position: relative;
+  }
+  &__img{
+    @include imgCover(50%);
+  }
+  &__text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2em 2.5em;
+    color: $white;
+    @include grid100gap(.375em);
+  }
+  &__desc{
+    text-transform: uppercase;
+    font-size: 1em;
+    letter-spacing: .06em;
+  }
+  .swiper-slide{
+    background: transparent;
+  }
+  &__bottom{
+    margin-top: 4em;
+    display: grid;
+    grid-template-columns: calc(100% - 44.5em) 37.5em;
+    gap: 2.25em 7em;
+    color: $black;
+    &-col{
+      display: flex;
+      flex-direction: column;
+    }
+    &-col2{
+      padding-left: 4em;
+      border-left: $border2;
+    }
+  }
+  &__items{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3em 1em;
+    margin-top: 3.25em;
+  }
+  &__item{
+    &-num{
+      font-size: 3em;
+      line-height: 71% !important;
+      margin-bottom: .25em;
+      margin-left: -.125em;
+      @include sameNumWidth;
+    }
+  }
+  &__contacts{
+    margin-top: auto;
+    padding-top: 1.5em;
+  }
+}
+
+.odometer{
+  font-family: inherit !important;
+  .odometer-formatting-mark{
+    display: none;
+  }
+}
+
+.project-team{
+  &__inner{
+    padding: 2.5em;
+    background: #F6F5F3;
+    display: grid;
+    grid-template-columns: calc(100% - 37.25em) 35em;
+    gap: 2em 2.25em;
+  }
+  &__items{
+    @include grid100gap(1.5em);
+  }
+  &__item{
+    color: $dark;
+    font-size: 1.125em;
+    line-height: 111%;
+  }
+}
+
+.project-info{
+  &__inner{
+    display: grid;
+    grid-template-columns: calc(100% - 40em) 36.25em;
+    gap: 2.25em 3.75em;
+    align-items: center;
+  }
+  &__img{
+    width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  &__title{
+    text-transform: unset;
+  }
+  .text{
+    margin-top: 1em;
+    color: #666;
+  }
+  &__content{
+    max-width: 56.25em;
+  }
+  &__images{
+    margin-top: 2.25em;
+    display: grid;
+    grid-template-columns: repeat(2,calc(50% - .625em));
+    gap: 1.25em;
+  }
+  &._reverse{
+    @media screen and (min-width: 993px){
+      .project-info__inner{
+        grid-template-columns: 36.25em calc(100% - 40em);
+      }
+      .project-info__col2{
+        order: -1;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 992px){
+  .project-main{
+    padding-bottom: 1.5em;
+    padding-top: 0;
+    .main-slider .container{
+      padding: 0;
+    }
+    &__text{
+      padding: 1.5em 1.375em;
+      gap: .125em;
+    }
+    &__desc{
+      font-size: .8125em;
+    }
+    &__bottom{
+      margin-top: 1.5em;
+      grid-template-columns: 100%;
+      &-col2{
+        padding: 2em 0 0;
+        border-left: none;
+        border-top: $border2;
+      }
+    }
+    &__items{
+      row-gap: 2.5em;
+      margin-top: 1.5em;
+    }
+    &__item{
+      &-num{
+        font-size: 2.625em;
+        line-height: 75% !important;
+        margin-bottom: .3em;
+      }
+      .text13{
+        font-size: .6875em;
+      }
+    }
+    &__contacts{
+      display: none;
+    }
+  }
+
+  .project-team{
+    .container{
+      padding: 0;
+    }
+    &__inner{
+      padding: 3em 1.25em;
+      grid-template-columns: 100%;
+    }
+    &__items{
+      gap: 1em;
+    }
+    &__item{
+      font-size: 1em;
+      line-height: 125%;
+    }
+  }
+
+  .project-info{
+    &__inner{
+      grid-template-columns: 100%;
+    }
+    &__img{
+      width: calc(100% + 2.5em);
+      margin-left: -1.25em;
+    }
+    &__title{
+      font-size: 1.375em;
+    }
+    &__images{
+      grid-template-columns: 100%;
+      .project-info__img:nth-child(1)~.project-info__img{
+        display: none;
+      }
+    }
+  }
+
+  .project-location{
+    display: none;
+  }
+}
+
+
+@media screen and (max-width: 576px){
+  .project-main{
+    &__img{
+      padding-bottom: 126%;
+    }
+    &__items{
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .project-info{
+
+  }
+}

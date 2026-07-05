@@ -1,0 +1,98 @@
+<!DOCTYPE html> @@include('components/page-blocks/_head.html',{ "lang":"ru", "title":"Главная", "description":"", "keywords":"",})
+
+<body class="m-page">
+<div class="wrapper">
+    <header class="header">
+        @@include('components/page-blocks/_header.html')
+    </header>
+    <main class="content">
+
+        <div class="blog m-section _first _last">
+            <div class="container">
+                <h1 class="m-title h4 anim-newSing anim-newSing--transform">
+                    НОВОСТИ
+                </h1>
+                <div class="blog__items">
+                    @@include('components/cards/_blog-card.html',{
+                    "img":"blog-img",
+                    "title":"Заливка фундаментальной плиты на Light City",
+                    "desc":"ХОД СТРОИТЕЛЬСТВА",
+                    "day":"10",
+                    "date":"МАЙ / 26",
+                    })
+                    @@include('components/cards/_blog-card.html',{
+                    "img":"blog-img2",
+                    "title":"Строительство жилого комплекса VESPER ",
+                    "desc":"СТАТЬЯ",
+                    "day":"24",
+                    "date":"АПРЕЛЬ / 26",
+                    })
+                    @@include('components/cards/_blog-card.html',{
+                    "img":"blog-img3",
+                    "title":"Завершение строительства гостиницы COSMOS",
+                    "desc":"ХОД СТРОИТЕЛЬСТВА",
+                    "day":"16",
+                    "date":"март / 26",
+                    })
+                    @@include('components/cards/_blog-card.html',{
+                    "img":"blog-img",
+                    "title":"Заливка фундаментальной плиты на Light City",
+                    "desc":"ХОД СТРОИТЕЛЬСТВА",
+                    "day":"10",
+                    "date":"МАЙ / 26",
+                    })
+                    @@include('components/cards/_blog-card.html',{
+                    "img":"blog-img2",
+                    "title":"Строительство жилого комплекса VESPER ",
+                    "desc":"СТАТЬЯ",
+                    "day":"24",
+                    "date":"АПРЕЛЬ / 26",
+                    })
+                    @@include('components/cards/_blog-card.html',{
+                    "img":"blog-img3",
+                    "title":"Завершение строительства гостиницы COSMOS",
+                    "desc":"ХОД СТРОИТЕЛЬСТВА",
+                    "day":"16",
+                    "date":"март / 26",
+                    })
+                    @@include('components/cards/_blog-card.html',{
+                    "img":"blog-img",
+                    "title":"Заливка фундаментальной плиты на Light City",
+                    "desc":"ХОД СТРОИТЕЛЬСТВА",
+                    "day":"10",
+                    "date":"МАЙ / 26",
+                    })
+                    @@include('components/cards/_blog-card.html',{
+                    "img":"blog-img2",
+                    "title":"Строительство жилого комплекса VESPER ",
+                    "desc":"СТАТЬЯ",
+                    "day":"24",
+                    "date":"АПРЕЛЬ / 26",
+                    })
+                    @@include('components/cards/_blog-card.html',{
+                    "img":"blog-img3",
+                    "title":"Завершение строительства гостиницы COSMOS",
+                    "desc":"ХОД СТРОИТЕЛЬСТВА",
+                    "day":"16",
+                    "date":"март / 26",
+                    })
+                </div>
+                <div class="blog__bottom">
+                    <button class="more-btn m-btn">
+                        <span>ПоКАЗАТЬ ЕЩЕ</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+    <footer class="footer">
+        @@include('components/page-blocks/_footer.html')
+    </footer>
+</div>
+
+@@include('components/page-blocks/_scripts.html')
+</body>
+
+</html>

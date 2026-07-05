@@ -1,0 +1,215 @@
+._no-wrap{
+  white-space: nowrap;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.caps-text{
+  text-transform: uppercase;
+}
+
+.underline-text{
+  text-decoration: underline;
+}
+
+.m-title{
+  line-height: 128%;
+  letter-spacing: .04em;
+  font-weight: 500;
+}
+
+.h1{
+  font-size: 3em;
+  font-weight: 600;
+  line-height: 122%;
+  text-transform: uppercase;
+}
+
+.h2{
+  font-size: 2.75em;
+  font-weight: 500;
+  line-height: 122%;
+  text-transform: uppercase;
+}
+
+.h3{
+  font-size: 2.125em;
+  line-height: 125%;
+  text-transform: uppercase;
+}
+
+.h4{
+  font-size: 2em;
+  text-transform: uppercase;
+}
+
+.h5{
+  font-size: 1.625em;
+  text-transform: uppercase;
+}
+
+.h6{
+  font-size: 1.375em;
+  text-transform: uppercase;
+}
+
+.text20{
+  font-size: 1.25em;
+  line-height: 130%;
+}
+
+.text19{
+  font-size: 1.1875em;
+  line-height: 120%;
+}
+
+.text18{
+  font-size: 1.125em;
+  line-height: 133%;
+}
+
+.text17{
+  font-size: 1.0625em;
+  line-height: 120%;
+}
+
+.text16{
+  font-size: 1em;
+  line-height: 150%;
+}
+
+.text15{
+  font-size: .9375em;
+  line-height: 120%;
+}
+
+.text14{
+  font-size: .875em;
+  line-height: 129%;
+}
+
+.text13{
+  font-size: .8125em;
+  line-height: 130%;
+}
+
+.text12{
+  font-size: .75em;
+  line-height: 120%;
+}
+
+.text11{
+  font-size: .6875em;
+  line-height: 120%;
+}
+
+.text10{
+  font-size: .625em;
+  line-height: 120%;
+}
+
+.extra-bold-text{
+  font-weight: 800;
+}
+
+.bold-text{
+  font-weight: 700;
+}
+
+.semi-bold-text{
+  font-weight: 600;
+}
+
+.medium-text{
+  font-weight: 500;
+}
+
+.regular-text{
+  font-weight: 400;
+}
+
+.light-text{
+  font-weight: 300;
+}
+
+.font2{
+  font-family: $font2;
+}
+
+.dark-text{
+  color: $dark;
+}
+
+.gray-text{
+  color: $gray;
+}
+
+.gray-text2{
+  color: $gray2;
+}
+
+
+
+@media screen and (max-width: 992px){
+  .h1{
+    font-size: 2em;
+  }
+
+  .h2,
+  .h3{
+    font-size: 1.5em;
+  }
+
+  .h4{
+    font-size: 1.375em;
+  }
+
+  .h5,
+  .text20-tablet{
+    font-size: 1.25em;
+  }
+
+  .text19-tablet{
+    font-size: 1.1875em;
+  }
+
+  .h6,
+  .text18-tablet{
+    font-size: 1.125em;
+  }
+
+  .text17-tablet{
+    font-size: 1.0625em;
+  }
+
+  .text16-tablet{
+    font-size: 1em;
+  }
+
+  .text15-tablet{
+    font-size: .9375em;
+  }
+
+  .text14-tablet{
+    font-size: .875em;
+  }
+
+  .text13-tablet{
+    font-size: .8125em;
+  }
+
+  .text12-tablet{
+    font-size: .75em;
+  }
+
+  .text11-tablet{
+    font-size: .6875em;
+  }
+
+  .text10-tablet{
+    font-size: .625em;
+  }
+
+}

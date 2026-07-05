@@ -1,0 +1,39 @@
+.grid{
+  display: grid;
+  gap: 1.25em;
+  grid-template-columns: 100%;
+}
+
+.grid2{
+  grid-template-columns: repeat(2,calc(50% - .5em));
+}
+
+.grid3{
+  grid-template-columns: repeat(3,calc(100% / 3 - 2.5em / 3));
+}
+
+.grid4{
+  grid-template-columns: repeat(4,calc(25% - 3.75em / 4));
+}
+
+.grid5{
+  grid-template-columns: repeat(4,calc(25% - 3.75em / 4));
+}
+
+
+@media screen and (max-width: 992px){
+  .grid-tablet{
+    grid-template-columns: 100%;
+  }
+
+  .grid-tablet2{
+    grid-template-columns: repeat(2,calc(50% - .625em));
+  }
+}
+
+
+@media screen and (max-width: 576px){
+  .grid-mob{
+    grid-template-columns: 100%;
+  }
+}

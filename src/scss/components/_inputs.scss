@@ -1,0 +1,179 @@
+.fg {
+  position: relative;
+  margin: 0;
+  input,
+  textarea{
+    border-radius: 0;
+    border: none;
+    border-bottom: .07em solid $black;
+    padding: 0;
+    height: 3.11em;
+    width: 100%;
+    font-size: 1.125em;
+    background-color: transparent;
+    color: $dark;
+    font-weight: 500;
+    &::placeholder {
+      color: $dark;
+    }
+    &:focus {
+      border-color: $primary;
+    }
+  }
+  textarea{
+    padding-top: 1.19em;
+    padding-bottom: 1.19em;
+    height: 13.0625em;
+    resize: vertical;
+  }
+  &__field{
+    position: relative;
+  }
+  &._error{
+    input,
+    textarea{
+      border-color: $primary;
+      color: $primary;
+      &::placeholder{
+        color: $primary;
+      }
+    }
+    .fg__error-text{
+      display: block;
+    }
+  }
+  &__error-text{
+    margin-top: .375em;
+    color: $primary;
+    display: none;
+  }
+}
+
+.fg2{
+  label{
+    display: block;
+    font-size: 1.125em;
+    line-height: 117%;
+    margin-bottom: .33em;
+    color: $gray;
+    font-weight: 400;
+  }
+  input,
+  textarea{
+    width: 100%;
+    height: 3.22em;
+    border-radius: .55em;
+    font-size: 1.125em;
+    line-height: 120%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 0 1em;
+    font-family: $font1;
+    font-weight: 300;
+    &::placeholder {
+      color: #999999;
+    }
+  }
+  textarea{
+    height: 5.5em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    resize: none;
+  }
+}
+
+.m-select{
+  select{
+    width: 100%;
+    height: 2.72em;
+    border-radius: .43em;
+    font-size: .875em;
+    font-family: $font1;
+    text-transform: uppercase;
+    color: $gray2;
+    padding: 0 3.25em 0 1.43em;
+    border: 1px solid #DEDCDC;
+    background-color: transparent;
+    background-image: url(../img/select-arrow.svg);
+    background-position: right 1.43em center;
+    background-repeat: no-repeat;
+    background-size: 1em auto;
+    @include removeSelectArrow;
+  }
+}
+
+.m-check{
+  position: relative;
+  input{
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    cursor: pointer;
+  }
+}
+
+.m-check{
+  label{
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding-left: 2.0625em;
+    min-height: 1.4375em;
+    color: #888;
+    span{
+      font-size: .8125em;
+      line-height: 131%;
+    }
+    &:before,
+    &:after{
+      pointer-events: none;
+    }
+    &:before{
+      content: '';
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      top: .1875em;
+      border: 1.5px solid #888;
+      width: 1.4375em;
+      height: 1.4375em;
+      @include bgImgSize(0);
+      transition: all .0s;
+    }
+    a{
+      text-decoration: underline;
+      position: relative;
+      z-index: 2;
+    }
+  }
+}
+
+.m-check {
+  input {
+    &:checked+label {
+      &::before {
+        background-size: .8125em auto;
+      }
+    }
+  }
+  label {
+    &:before {
+      border-radius: .125em;
+      background-image: url(../img/check.svg);
+    }
+  }
+}
+
+
+@media screen and (max-width: 992px){
+
+}
+
+
+@media screen and (max-width: 576px){
+
+}

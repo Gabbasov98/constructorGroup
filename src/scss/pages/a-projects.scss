@@ -1,0 +1,70 @@
+.projects{
+  &__grid{
+    display: grid;
+    grid-template-columns: repeat(2,calc(50% - 1.25em));
+    gap: 3.69em 2.5em;
+  }
+}
+
+.project-card{
+  display: block;
+  position: relative;
+  &:hover{
+    color: $black;
+  }
+  &__badge{
+    position: absolute;
+    top: 1.5em;
+    left: 1.5em;
+    padding: 0 1.125em;
+    height: 2.75em;
+    display: flex;
+    align-items: center;
+    border: 1px solid $white;
+    color: $white;
+    z-index: 2;
+    pointer-events: none;
+  }
+  &__img{
+    @include imgCover(75%);
+  }
+  &__text{
+    text-align: center;
+  }
+  &__title{
+    font-size: 1.375em;
+  }
+  &__desc{
+    color: $gray;
+    font-size: .875em;
+    margin-top: .375em;
+  }
+}
+
+
+@media screen and (max-width: 992px){
+  .project-card{
+    &__badge{
+      height: 2.625em;
+    }
+    &__img{
+      padding-bottom: 125%;
+    }
+    &__title{
+      font-size: 1.125em;
+    }
+    &__desc{
+      font-size: .8125em;
+    }
+  }
+}
+
+
+@media screen and (max-width: 576px){
+  .projects{
+    &__grid{
+      grid-template-columns: 100%;
+      gap: 3.44em;
+    }
+  }
+}

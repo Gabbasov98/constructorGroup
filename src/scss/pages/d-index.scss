@@ -1,0 +1,172 @@
+.blog-collection{
+  .blog__items{
+    margin-top: 2em;
+  }
+}
+
+.build-video{
+  &__inner{
+    position: relative;
+    display: block;
+  }
+  &__img{
+    @include imgCover(56.7%);
+  }
+  &__content{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-25%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    color: $white;
+    img{
+      width: 5em;
+      margin-bottom: 1.19em;
+    }
+  }
+  &__desc{
+    font-size: 1em;
+    line-height: 125%;
+    letter-spacing: .08em;
+    margin-top: .44em;
+  }
+}
+
+.expertise{
+  &__top{
+    display: grid;
+    grid-template-columns: 22em 39.75em;
+    justify-content: space-between;
+  }
+  &__subtitle{
+    font-size: 1.875em;
+    letter-spacing: unset;
+  }
+  &__grid{
+    margin-top: 4em;
+    display: grid;
+    grid-template-columns: 22.375em calc(100% - 49em) 26.625em;
+    padding-bottom: 5em;
+    border-bottom: 1px solid $black;
+  }
+}
+
+.expertise-card{
+  &__icon{
+    display: block;
+    margin-bottom: 5em;
+  }
+  &__content{
+    @include grid100gap(.625em);
+  }
+  &__title{
+    font-size: 1.5em;
+    line-height: 133%;
+    font-weight: 600;
+  }
+  @media screen and (min-width: 993px){
+    &:nth-child(2){
+      transition-delay: .2s;
+    }
+    &:nth-child(3){
+      transition-delay: .4s;
+    }
+    &__icon{
+      height: 3.75em;
+    }
+    &:nth-child(3n-2){
+      padding-right: 3.94em;
+      border-right: 1px solid $black;
+    }
+    &:nth-child(3n-1){
+      padding-right: 3.625em;
+      padding-left: 4.625em;
+      border-right: 1px solid $black;
+    }
+    &:nth-child(3n){
+      padding-left: 4.625em;
+    }
+  }
+}
+
+
+@media screen and (max-width: 992px){
+  .blog-collection{
+    .blog__items{
+      margin-top: 1em;
+    }
+  }
+
+  .build-video{
+    &__content{
+      transform: translateY(-25%);
+      img{
+        width: 3.75em;
+        margin-bottom: 1.25em;
+      }
+    }
+    &__desc{
+      font-size: .75em;
+      margin-top: .5em;
+    }
+  }
+
+  .expertise{
+    &__top{
+      grid-template-columns: 100%;
+    }
+    &__subtitle{
+      display: none;
+    }
+    &__grid{
+      margin-top: 1.5em;
+      grid-template-columns: 100%;
+      gap: 2.125em;
+      padding-bottom: 0;
+      border: none;
+    }
+  }
+
+  .expertise-card{
+    padding-bottom: 2.25em;
+    border-bottom: 1px solid $black;
+    display: flex;
+    align-items: flex-start;
+    &:last-child{
+      padding-bottom: 0;
+      border: none;
+    }
+    &__icon{
+      width: 2.5em;
+      margin: 0 2.5em 0 0;
+      flex-shrink: 0;
+    }
+    &__content{
+      gap: .5em;
+    }
+    &__title{
+      font-size: 1.125em;
+    }
+  }
+}
+
+
+@media screen and (max-width: 576px){
+  .blog-collection{
+    .blog__items{
+      margin-top: .75em;
+    }
+  }
+
+  .build-video{
+    .container{
+      padding: 0;
+    }
+    &__img{
+      padding-bottom: 150%;
+    }
+  }
+}

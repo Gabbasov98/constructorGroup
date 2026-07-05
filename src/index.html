@@ -1,0 +1,263 @@
+<!DOCTYPE html> @@include('components/page-blocks/_head.html',{ "lang":"ru", "title":"Главная", "description":"", "keywords":"",})
+
+<body class="m-page">
+<div class="wrapper">
+    <header class="header header-white">
+        @@include('components/page-blocks/_header.html')
+    </header>
+    <main class="content">
+
+        <div class="main">
+            <div class="main-slider">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" data-type="image">
+                            <div class="main-card">
+                                <div class="main-card__img">
+                                    <img src="img/main-img.webp" alt="" class="slide-media" loading="lazy">
+                                </div>
+                                <div class="slide-loader"></div>
+                                <div class="main-card__content">
+                                    <div class="container">
+                                        <div class="main-card__text">
+                                            <div class="h2">
+                                                Генеральный подрядчик
+                                                полного цикла
+                                            </div>
+                                            <div class="main-card__desc">
+                                                Реализация премиальных жилых <span class="_no-wrap">и коммерческих</span> проектов в Москве.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" data-type="video">
+                            <div class="main-card">
+                                <div class="main-card__img">
+                                    <video class="slide-media" src="videos/Countdown7.mp4" muted playsinline preload="metadata"></video>
+                                </div>
+                                <div class="slide-loader"></div>
+                                <div class="main-card__content">
+                                    <div class="container">
+                                        <div class="main-card__text">
+                                            <div class="h2">
+                                                Генеральный подрядчик
+                                                полного цикла
+                                            </div>
+                                            <div class="main-card__desc">
+                                                Реализация премиальных жилых <span class="_no-wrap">и коммерческих</span> проектов в Москве.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="main-slider__nav">
+                    <div class="container">
+                        <div class="slider-controls">
+                            <button class="slider-arrow slider-arrow-prev" aria-label="Предыдущий слайд">
+                                <img src="img/prev2.svg" alt="">
+                            </button>
+
+                            <div class="swiper-pagination slider-fraction"></div>
+
+                            <button class="slider-arrow slider-arrow-next" aria-label="Следующий слайд">
+                                <img src="img/next2.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-about m-section">
+            <div class="container">
+                <div class="main-about__grid anim-newSing">
+                    <div class="main-about__col">
+                        <div class="h3 m-title anim-newSing anim-newSing--transform">
+                            CONSTRUCTOR group — строительная компания реализующая самые амбициозные проекты Москвы премиум класса.
+                        </div>
+                        <div class="main-about__bottom anim-newSing anim-newSing--transform">
+                            <div class="text20 text14-tablet m-title caps-text">
+                                Ключевые показатели
+                            </div>
+                            <div class="main-about__items">
+                                <div class="main-about__item">
+                                    <div class="main-about__title">
+                                        <span>12</span> лет
+                                    </div>
+                                    <div class="main-about__desc m-title">
+                                        В строительстве
+                                        <span class="_no-wrap">и управлении</span> проектами
+                                    </div>
+                                </div>
+                                <div class="main-about__item">
+                                    <div class="main-about__title">
+                                        <span>321532</span> м<sup>2</sup>
+                                    </div>
+                                    <div class="main-about__desc m-title">
+                                        Общая площадь
+                                        <span class="_no-wrap">реализованных объектов</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-about__col2">
+                        <img src="img/main-about.webp" alt="" class="main-about__img anim-newSing anim-newSing--transform">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-projects m-section">
+            <div class="container">
+                <div class="h5 m-title semi-bold-text anim-newSing anim-newSing--transform">
+                    ХОД СТРОИТЕЛЬСТВА
+                </div>
+                <div class="projects-slider slider _loop anim-newSing anim-newSing--transform">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                @@include('components/cards/_project-card.html',{
+                                "img":"project-img8",
+                                "title":"VESPER КУТУЗОВСКИЙ",
+                                "desc":"ЖИЛОЙ КОМПЛЕКС",
+                                "badge":"",
+                                })
+                            </div>
+                            <div class="swiper-slide">
+                                @@include('components/cards/_project-card.html',{
+                                "img":"project-img7",
+                                "title":"LUCKY",
+                                "desc":"ЖИЛОЙ КОМПЛЕКС",
+                                "badge":"",
+                                })
+                            </div>
+                            <div class="swiper-slide">
+                                @@include('components/cards/_project-card.html',{
+                                "img":"project-img9",
+                                "title":"COSMOS",
+                                "desc":"ГОСТИНИЦА",
+                                "badge":"",
+                                })
+                            </div>
+                            <div class="swiper-slide">
+                                @@include('components/cards/_project-card.html',{
+                                "img":"project-img9",
+                                "title":"COSMOS",
+                                "desc":"ГОСТИНИЦА",
+                                "badge":"",
+                                })
+                            </div>
+                        </div>
+                    </div>
+                    @@include('components/ui/_swiper-nav.html')
+                </div>
+            </div>
+        </div>
+
+        <div class="expertise m-section">
+            <div class="container">
+                <div class="expertise__top anim-newSing anim-newSing--transform">
+                    <div class="h5 m-title semi-bold-text">
+                        экспертиза
+                    </div>
+                    <div class="expertise__subtitle h5 m-title">
+                        Реализуем проекты, где архитектура,
+                        инженерия и управление <span class="_no-wrap">работают как единая</span> система.
+                    </div>
+                </div>
+                <div class="expertise__grid">
+                    @@include('components/cards/_expertise-card.html',{
+                    "icon":"expertise-icon",
+                    "title":"Системный контроль",
+                    "desc":"Обеспечиваем управление всеми этапами реализации проекта",
+                    })
+                    @@include('components/cards/_expertise-card.html',{
+                    "icon":"expertise-icon2",
+                    "title":"Практический опыт",
+                    "desc":"Решаем сложные строительные задачи в условиях ограничений и высоких требований",
+                    })
+                    @@include('components/cards/_expertise-card.html',{
+                    "icon":"expertise-icon3",
+                    "title":"Фокус на результат",
+                    "desc":"Выстраиваем процессы с учетом сроков, бюджета и стратегических задач проекта",
+                    })
+                </div>
+            </div>
+        </div>
+
+        <div class="build-video m-section anim-newSing anim-newSing--transform">
+            <div class="container">
+                <a href="videos/Countdown7.mp4" data-fancybox class="build-video__inner">
+                    <div class="build-video__img">
+                        <img src="img/build-video.webp" alt="">
+                    </div>
+                    <div class="build-video__content">
+                        <img src="img/play.svg" alt="">
+                        <div class="h5 m-title">
+                            COSMOS HOTEL
+                        </div>
+                        <div class="build-video__desc">
+                            ЗАВЕРШЕНИЕ СТРОИТЕЛЬСТВА
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="blog-collection m-section _last">
+            <div class="container">
+                <div class="_flex-between anim-newSing anim-newSing--transform">
+                    <div class="h5 m-title semi-bold-text">
+                        НОВОСТИ
+                    </div>
+                    <a href="" class="arrow-btn arrow-btn2 _gray">
+                        <span class="_view1">Смотреть все</span>
+                        <span class="_view2">все</span>
+                        <img src="img/arrow-right3.svg" alt="">
+                    </a>
+                </div>
+                <div class="blog__items">
+                    @@include('components/cards/_blog-card.html',{
+                    "img":"blog-img",
+                    "title":"Заливка фундаментальной плиты на Light City",
+                    "desc":"ХОД СТРОИТЕЛЬСТВА",
+                    "day":"10",
+                    "date":"МАЙ / 26",
+                    })
+                    @@include('components/cards/_blog-card.html',{
+                    "img":"blog-img2",
+                    "title":"Строительство жилого комплекса VESPER ",
+                    "desc":"СТАТЬЯ",
+                    "day":"24",
+                    "date":"АПРЕЛЬ / 26",
+                    })
+                    @@include('components/cards/_blog-card.html',{
+                    "img":"blog-img3",
+                    "title":"Завершение строительства гостиницы COSMOS",
+                    "desc":"ХОД СТРОИТЕЛЬСТВА",
+                    "day":"16",
+                    "date":"март / 26",
+                    })
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+    <footer class="footer">
+        @@include('components/page-blocks/_footer.html')
+    </footer>
+</div>
+
+@@include('components/page-blocks/_scripts.html')
+</body>
+
+</html>

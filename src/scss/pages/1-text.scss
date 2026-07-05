@@ -1,0 +1,67 @@
+.text{
+  font-size: 1.125em;
+  line-height: 133%;
+  @include grid100gap(1.33em);
+  color: $dark;
+  *{
+    line-height: inherit;
+  }
+  h1,h2,h3,h4,h5,h6{
+    font-weight: 600;
+  }
+  h1{
+    font-size: 1.54em;
+  }
+  h2{
+    font-size: 1.44em;
+  }
+  h3{
+    font-size: 1.34em;
+  }
+  h4{
+    font-size: 1.24em;
+  }
+  h5{
+    font-size: 1.14em;
+  }
+  h6{
+    font-size: 1.04em;
+  }
+  ol {
+    counter-reset: list;
+    li {
+      counter-increment: list;
+      &:before {
+        content: counter(list) '. ';
+      }
+    }
+  }
+  ul{
+    li{
+      position: relative;
+      &:before{
+        content: '•';
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+  img{
+    width: 100%;
+    display: block;
+  }
+}
+
+
+
+@media screen and (max-width: 992px){
+  .text{
+    font-size: 1em;
+  }
+}
+
+
+@media screen and (max-width: 576px){
+
+}
