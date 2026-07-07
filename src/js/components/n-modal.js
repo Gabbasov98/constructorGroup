@@ -1,4 +1,3 @@
-let body = document.querySelector("body")
 let modalTogglers = document.querySelectorAll("[data-modal]")
 let modals = document.querySelectorAll(".modal")
 

@@ -3,7 +3,7 @@
 }
 
 .projects-slider{
-  width: 56.25em;
+  padding: 0 9.375em;
   margin: 2em auto 0;
   .swiper-container{
     width: calc(100% + 1.875em);
@@ -41,13 +41,13 @@
     grid-template-columns: 37.5em calc(100% - 37.5em - 3.125em);
     gap: 3.125em;
     padding-bottom: 5em;
-    border-bottom: 1px solid $black;
+    border-bottom: 2px solid $black;
   }
   &__col{
     padding-right: 3.125em;
     display: flex;
     flex-direction: column;
-    border-right: 1px solid $black;
+    border-right: 2px solid $black;
   }
   .h3{
     letter-spacing: unset;
@@ -87,6 +87,7 @@
   .projects-slider{
     width: 100%;
     margin-top: .75em;
+    padding: 0;
     .swiper-container{
       width: calc(100% + .5em);
     }

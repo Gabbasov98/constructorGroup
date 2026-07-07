@@ -50,7 +50,7 @@
     display: grid;
     grid-template-columns: 22.375em calc(100% - 49em) 26.625em;
     padding-bottom: 5em;
-    border-bottom: 1px solid $black;
+    border-bottom: 2px solid $black;
   }
 }
 
@@ -79,12 +79,12 @@
     }
     &:nth-child(3n-2){
       padding-right: 3.94em;
-      border-right: 1px solid $black;
+      border-right: 2px solid $black;
     }
     &:nth-child(3n-1){
       padding-right: 3.625em;
       padding-left: 4.625em;
-      border-right: 1px solid $black;
+      border-right: 2px solid $black;
     }
     &:nth-child(3n){
       padding-left: 4.625em;
@@ -132,7 +132,7 @@
 
   .expertise-card{
     padding-bottom: 2.25em;
-    border-bottom: 1px solid $black;
+    border-bottom: 2px solid $black;
     display: flex;
     align-items: flex-start;
     &:last-child{

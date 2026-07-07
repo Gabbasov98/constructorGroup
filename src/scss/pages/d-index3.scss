@@ -27,17 +27,18 @@
   .swiper-pagination{
     position: static;
     width: auto;
-    @include sameNumWidth;
+    margin: 0;
+    //@include sameNumWidth;
   }
   .slider-fraction-sep,
   .slider-fraction-curr{
     font-size: 1.375em;
-    letter-spacing: -0.01em;
+    letter-spacing: .06em;
   }
   .slider-fraction-tot{
     color: #969696;
     font-size: 1em;
-    letter-spacing: -0.01em;
+    letter-spacing: .06em;
   }
   .swiper-slide {
     position: relative;

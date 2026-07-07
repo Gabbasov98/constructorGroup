@@ -3,6 +3,9 @@
   border-bottom: $border;
   position: relative;
   height: 5.625em;
+  padding: .25em 0;
+  display: flex;
+  justify-content: space-between;
   &__logo{
     @include centerAbsolute;
     display: block;
@@ -16,6 +19,22 @@
       display: none;
     }
   }
+  &._open{
+    .menu{
+      opacity: 1;
+      pointer-events: unset;
+    }
+    .burger__icon{
+      span{
+        &:first-child{
+          transform: rotate(45deg) translate(.375em,0);
+        }
+        &:last-child{
+          transform: rotate(-45deg) translate(.375em,0);
+        }
+      }
+    }
+  }
 }
 
 .header-white{
@@ -23,19 +42,145 @@
   top: 0;
   left: 0;
   width: 100%;
-  border-color: rgba(255, 255, 255, 0.50);
-  .header__logo{
-    ._view1{
-      display: none;
+  &._open{
+    background-color: $white;
+  }
+  &:not(._open){
+    color: $white;
+    border-color: rgba($white, .5);
+    .header__logo{
+      ._view1{
+        display: none;
+      }
+      ._view2{
+        display: block;
+      }
     }
-    ._view2{
-      display: block;
+    .nav{
+      a{
+        color: $white;
+      }
+      a._active{
+        color: $white;
+      }
+    }
+    .burger{
+      color: $white;
+      border-color: rgba($white, .5);
+      &__icon{
+        span{
+          background-color: $white;
+        }
+      }
+    }
+    .header-action__link{
+      color: $white;
+      border-color: rgba($white, .5);
+      &:hover{
+        color: $white;
+      }
     }
   }
 }
 
 .burger{
-  display: none;
+  transition: 0s;
+  display: flex;
+  align-items: center;
+  border-right: $border;
+  padding: 0 1.875em;
+  height: 100%;
+  &__icon{
+    margin-right: .875em;
+    display: flex;
+    flex-direction: column;
+    gap: .4375em;
+    span{
+      width: 2.125em;
+      height: 2px;
+      background-color: $dark;
+      display: block;
+      transition: all .3s;
+    }
+  }
+}
+
+.nav.nav-header{
+  flex-grow: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 1.875em;
+  font-weight: 600;
+  ul{
+    display: flex;
+    gap: 2em;
+    width: 100%;
+  }
+  a{
+    transition: 0s;
+  }
+  li:last-child{
+    margin-left: auto;
+  }
+}
+
+.header-action{
+  display: flex;
+  height: 100%;
+  &__link{
+    transition: 0s;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 1.875em;
+    border-left: $border;
+    color: $dark;
+    &:hover{
+      color: $dark;
+    }
+  }
+}
+
+.menu{
+  height: calc(100 * var(--vh) - 5.625em);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: $white;
+  opacity: 0;
+  pointer-events: none;
+  &__scroll{
+    height: 100%;
+    overflow-y: auto;
+    padding: 3.125em 6.25em;
+  }
+  &__inner{
+    display: grid;
+    grid-template-columns: 18em 46.5em;
+    justify-content: space-between;
+  }
+  .footer-action{
+    margin-top: 3.125em;
+  }
+  &__lang{
+    margin-top: 3.125em;
+    display: flex;
+    &-btn{
+      font-size: 1.125em;
+      font-weight: 500;
+      color: $dark;
+    }
+  }
+  &__items{
+    display: grid;
+    grid-template-columns: repeat(2,calc(50% - 1.375em));
+    gap: 2.75em;
+  }
+  .project-card__img{
+    padding-bottom: 126%;
+  }
 }
 
 
@@ -47,6 +192,34 @@
     }
   }
 
+  .burger{
+    padding: 0 1.25em;
+    border: none;
+    &__text{
+      display: none;
+    }
+    &__icon{
+      margin-right: 0;
+    }
+  }
+
+  .header-action,
+  .nav.nav-header{
+    display: none;
+  }
+
+  .menu{
+    height: calc(100 * var(--vh) - 4.25em);
+    &__scroll{
+      padding: 2.5em 1.25em;
+    }
+    &__inner{
+      grid-template-columns: 100%;
+    }
+    &__col2{
+      display: none;
+    }
+  }
 }
 
 

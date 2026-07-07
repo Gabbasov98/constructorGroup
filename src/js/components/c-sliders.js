@@ -97,6 +97,10 @@ let mainSlider = document.querySelector(".main-slider")
 if(mainSlider) {
     const swiper = new Swiper('.main-slider .swiper-container', {
         loop: true,
+        effect: 'fade',           // ← Enable fade effect
+        fadeEffect: {
+            crossFade: true        // ← True cross-fade (recommended)
+        },
         autoplay: {
             delay: 4000,
             disableOnInteraction: false,

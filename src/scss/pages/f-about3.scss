@@ -18,8 +18,8 @@
     grid-template-columns: auto auto;
     justify-content: space-between;
     gap: 5em 1em;
-    border-top: $border2;
-    border-bottom: $border2;
+    border-top: 2px solid $black;
+    border-bottom: 2px solid $black;
     padding: 3.75em 0;
   }
   &__bottom{

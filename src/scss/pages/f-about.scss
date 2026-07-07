@@ -30,7 +30,7 @@
     grid-template-columns: 18.5em calc(100% - 20em);
     gap: 1.5em;
     padding-bottom: 5em;
-    border-bottom: .125em solid $black;
+    border-bottom: 2px solid $black;
   }
   &__items{
     display: grid;

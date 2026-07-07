@@ -68,9 +68,11 @@
 
 .line-link,
 .nav a{
+    color: $dark;
     border-bottom: 1px solid transparent;
+    &._active,
     &:hover{
-        color: $black;
+        color: $dark;
         border-color: $primary;
     }
 }

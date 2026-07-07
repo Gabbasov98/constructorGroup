@@ -80,6 +80,9 @@
   .text{
     margin-top: 2em;
   }
+  .arrow-btn span{
+    font-size: .875em;
+  }
 }
 
 .build-process{
@@ -97,6 +100,11 @@
 }
 
 .blog-collection{
+  .arrow-btn{
+    span{
+      font-size: .875em;
+    }
+  }
   .blog-card{
     @media screen and (min-width: 993px) {
       &:nth-child(2) {

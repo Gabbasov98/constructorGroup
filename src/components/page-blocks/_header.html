@@ -1,4 +1,81 @@
+<button class="burger">
+    <span class="burger__icon">
+        <span></span>
+        <span></span>
+    </span>
+    <span class="burger__text">Меню</span>
+</button>
+
+<div class="nav nav-header dark-text">
+    <ul>
+        <li><a href="">Проекты</a></li>
+        <li><a href="" class="_active">О компании</a></li>
+        <li><a href="">Контакты</a></li>
+    </ul>
+</div>
+
 <a href="" class="header__logo">
     <img class="_view1" src="img/logo-header.svg" alt="">
     <img class="_view2" src="img/logo-header-white.svg" alt="">
 </a>
+
+<div class="header-action">
+    <a href="" class="header-action__link">
+        <span>+7 495 280-55-45</span>
+    </a>
+    <a href="" class="header-action__link">
+        <span>EN</span>
+    </a>
+</div>
+
+<div class="menu">
+    <div class="menu__scroll">
+        <div class="menu__inner">
+            <div class="menu__col">
+                <div class="nav dark-text">
+                    <ul>
+                        <li><a href="" class="_active">О компании</a></li>
+                        <li><a href="">Проекты</a></li>
+                        <li><a href="">Услуги</a></li>
+                        <li><a href="">Новости</a></li>
+                        <li><a href="">Галерея</a></li>
+                        <li><a href="">Контакты</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-action dark-text">
+                    <div class="footer-action__top">
+                        <div class="text16 medium-text">
+                            1-й Магистральный проезд д.11 стр.1 блок А, этаж 3, БЦ "Интерьер"
+                        </div>
+                    </div>
+                    <div class="footer-contacts _mt20">
+                        <a href="" class="text18">+7 495 280-55-45</a>
+                        <a href="" class="text16 line-link _yellow">info@constructorgroup.ru</a>
+                    </div>
+                </div>
+                <div class="menu__lang">
+                    <a href="" class="menu__lang-btn">
+                        English
+                    </a>
+                </div>
+            </div>
+            <div class="menu__col2">
+                <div class="menu__items">
+                    @@include('../cards/_project-card.html',{
+                    "img":"project-img",
+                    "title":"VESPER КУТУЗОВСКИЙ",
+                    "desc":"ЖИЛОЙ КОМПЛЕКС",
+                    "badge":"В реализации",
+                    })
+                    @@include('../cards/_project-card.html',{
+                    "img":"project-img2",
+                    "title":"LIGHT CITY",
+                    "desc":"ДЕЛОВОЙ ЦЕНТР",
+                    "badge":"В реализации",
+                    })
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

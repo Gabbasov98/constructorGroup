@@ -26,10 +26,11 @@ html {
     font-family: $font1;
     font-weight: 400;
     color: $black;
-    font-size: calc(1440px * (16 / 1440));
-    @media screen and (max-width: 1440px){
-        font-size: calc(100vw * (16 / 1440));
-    }
+    font-size: calc(100vw * (16 / 1440));
+    //font-size: calc(1440px * (16 / 1440));
+    //@media screen and (max-width: 1440px){
+    //    font-size: calc(100vw * (16 / 1440));
+    //}
     &.fixed-body,
     &.fixed-body2{
         overflow-y: hidden;
@@ -38,10 +39,10 @@ html {
 }
 
 .container {
-    max-width: 1440px;
+    //max-width: 1440px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 7.5em;
+    padding: 0 6.25em;
 }
 
 a {
