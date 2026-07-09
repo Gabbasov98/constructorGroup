@@ -104,6 +104,12 @@
 
 
 @media screen and (max-width: 992px){
+  .project-progress{
+    &__top{
+      padding-right: 0;
+    }
+  }
+
   .progress-slider{
     margin-top: 1.625em;
     .swiper-nav{
