@@ -136,8 +136,15 @@
     padding: 0 1.875em;
     border-left: $border;
     color: $dark;
+    transition: .3s;
     &:hover{
       color: $dark;
+      span{
+        border-color: $primary;
+      }
+    }
+    span{
+      border-bottom: 1px solid transparent;
     }
   }
 }
@@ -180,6 +187,11 @@
   }
   .project-card__img{
     padding-bottom: 126%;
+  }
+  .nav{
+    a{
+      font-size: 1.125em;
+    }
   }
 }
 

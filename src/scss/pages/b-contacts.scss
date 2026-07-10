@@ -41,6 +41,10 @@
 .map{
   height: 28.125em;
   filter: grayscale(100%);
+  .ymaps-2-1-79-copyright,
+  .ymaps-2-1-79-map-copyrights-promo{
+    display: none;
+  }
 }
 
 

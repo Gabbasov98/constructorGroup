@@ -30,7 +30,7 @@
 
 .odometer[data-thousands-separate]{
   .odometer-digit:nth-last-child(3n+1){
-    margin-right: .25em;
+    margin-right: .125em;
   }
 }
 
