@@ -51,7 +51,10 @@
       line-height: 71% !important;
       margin-bottom: .25em;
       margin-left: -.125em;
-      @include sameNumWidth;
+      .odometer-digit{
+        width: .625em;
+        @include sameNumWidth;
+      }
     }
   }
   &__contacts{
