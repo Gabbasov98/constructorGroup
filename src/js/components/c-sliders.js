@@ -11,11 +11,12 @@ function Sliders() {
         let autoplayOptions = false
         let effect = false
         let fadeEffect = false
+        let speed = 300
 
 
         if(autoplay){
             autoplayOptions = {
-                delay: 6000,
+                delay: 3500,
                 disableOnInteraction: false,
                 pauseOnMouseEnter: true,
             }
@@ -25,6 +26,7 @@ function Sliders() {
             fadeEffect = {
                 crossFade: true
             }
+            speed = 2500
         }
 
         SlidersArray[index] = new Swiper(`.slider[data-slider-id="${index}"] .swiper-container`, {
@@ -40,6 +42,7 @@ function Sliders() {
             autoplay: autoplayOptions,
             effect: effect,
             fadeEffect: fadeEffect,
+            speed: speed,
             navigation: {
                 nextEl: `.slider[data-slider-id="${index}"] .swiper-button-next`,
                 prevEl: `.slider[data-slider-id="${index}"] .swiper-button-prev`,

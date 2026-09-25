@@ -36,6 +36,7 @@
 }
 
 .online-cameras{
+  overflow: hidden;
   &__link{
     display: flex;
     align-items: center;
@@ -166,7 +167,7 @@
     }
     &:hover,
     &._active{
-      font-weight: 600;
+      //font-weight: 600;
       &:before{
         opacity: 1;
       }
@@ -215,11 +216,19 @@
 
   .cameras-slider{
     margin-top: 1em;
+    .slider__wrap{
+      overflow: unset;
+    }
     .swiper-nav{
       display: none;
     }
+    .swiper-container{
+      width: calc(100% + .5em);
+    }
     .swiper-slide{
       width: 100%;
+      max-width: calc(100% - .5em);
+      padding-right: .5em;
     }
     .swiper-pagination{
       margin-top: .625em;

@@ -135,9 +135,16 @@
   }
   &__images{
     margin-top: 2.25em;
-    display: grid;
-    grid-template-columns: repeat(2,calc(50% - .625em));
-    gap: 1.25em;
+    //display: grid;
+    //grid-template-columns: repeat(2,calc(50% - .625em));
+    //gap: 1.25em;
+    .swiper-container{
+      width: calc(100% + 1.25em);
+    }
+    .swiper-slide{
+      width: 50%;
+      padding-right: 1.25em;
+    }
   }
   &._reverse{
     @media screen and (min-width: 993px){
@@ -223,9 +230,8 @@
       font-size: 1.375em;
     }
     &__images{
-      grid-template-columns: 100%;
-      .project-info__img:nth-child(1)~.project-info__img{
-        display: none;
+      .swiper-slide{
+        width: 100%;
       }
     }
   }
