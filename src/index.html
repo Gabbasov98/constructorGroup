@@ -121,9 +121,17 @@
 
         <div class="main-projects m-section">
             <div class="container">
-                <div class="h5 m-title semi-bold-text anim-newSing anim-newSing--transform">
-                    ПРОЕКТЫ
+                <div class="_flex-between anim-newSing anim-newSing--transform">
+                    <div class="h5 m-title semi-bold-text anim-newSing anim-newSing--transform">
+                        ПРОЕКТЫ
+                    </div>
+                    <a href="" class="arrow-btn arrow-btn2 _gray">
+                        <span class="_view1">Смотреть все</span>
+                        <span class="_view2">все</span>
+                        <img src="img/arrow-right3.svg" alt="">
+                    </a>
                 </div>
+
                 <div class="projects-slider slider _loop anim-newSing anim-newSing--transform">
                     <div class="swiper-container">
                         <div class="swiper-wrapper">
@@ -161,7 +169,7 @@
                             </div>
                         </div>
                     </div>
-                    @@include('components/ui/_swiper-nav.html')
+                    @@include('components/ui/_swiper-nav2.html')
                 </div>
             </div>
         </div>
@@ -199,20 +207,23 @@
 
         <div class="build-video m-section anim-newSing anim-newSing--transform">
             <div class="container">
-                <a href="videos/Countdown7.mp4" data-fancybox class="build-video__inner">
-                    <div class="build-video__img">
-                        <img src="img/build-video.webp" alt="">
-                    </div>
-                    <div class="build-video__content">
-                        <img src="img/play.svg" alt="">
-                        <div class="h5 m-title">
-                            COSMOS HOTEL
+                <div class="video-slider slider _loop anim-newSing anim-newSing--transform">
+                    <div class="slider__wrap">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    @@include('components/cards/_video-card.html')
+                                </div>
+                                <div class="swiper-slide">
+                                    @@include('components/cards/_video-card.html')
+                                </div>
+                            </div>
                         </div>
-                        <div class="build-video__desc">
-                            ЗАВЕРШЕНИЕ СТРОИТЕЛЬСТВА
-                        </div>
+                        <div class="swiper-pagination _custom"></div>
                     </div>
-                </a>
+                    @@include('components/ui/_swiper-nav2.html')
+                </div>
+
             </div>
         </div>
 

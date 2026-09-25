@@ -44,6 +44,26 @@
     background-color: rgba($black,.05);
     opacity: .9;
   }
+  &._custom{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
+    border: none;
+    width: 3.5em;
+    &:hover{
+      opacity: .8;
+    }
+    img{
+      width: 100%;
+    }
+    &.swiper-button-prev{
+      left: 1.25em;
+    }
+    &.swiper-button-next{
+      right: 1.25em;
+    }
+  }
 }
 
 .swiper-pagination{
@@ -58,6 +78,25 @@
     opacity: 1;
     &-active{
       background-color: $black;
+    }
+  }
+  &._custom{
+    position: absolute !important;
+    bottom: 1.25em;
+    left: 0;
+    width: 100% !important;
+    height: 1.5625em;
+    align-items: flex-end;
+    .swiper-pagination-bullet{
+      margin: 0 .25em !important;
+      width: .125em;
+      height: 1.125em;
+      border-radius: 0.0625em;
+      background-color: $white;
+      &-active{
+        height: 100%;
+        background-color: $primary;
+      }
     }
   }
 }

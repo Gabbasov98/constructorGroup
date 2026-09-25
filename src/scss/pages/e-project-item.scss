@@ -3,6 +3,7 @@
   padding-top: 5.75em;
   &__top{
     position: relative;
+    overflow: hidden;
   }
   &__img{
     @include imgCover(50%);
@@ -61,7 +62,28 @@
     margin-top: auto;
     padding-top: 1.5em;
   }
+  .swiper-slide-prev .project-main__img,
+  .swiper-slide-active .project-main__img,
+  .swiper-slide-duplicate-active .project-main__img {
+    animation-name: zoom;
+    animation-duration: 7s;
+    animation-fill-mode: forwards;
+    /* transform: scale(1.3);
+    transition: transform 25s ease; */
+    /* transition-delay: 1.5s; */
+  }
 }
+
+@keyframes zoom {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.15);
+  }
+}
+
 
 .odometer{
   font-family: inherit !important;
@@ -221,6 +243,11 @@
     }
     &__items{
       grid-template-columns: 1fr 1fr;
+    }
+    .swiper-slide{
+      .container{
+        padding: 0;
+      }
     }
   }
 

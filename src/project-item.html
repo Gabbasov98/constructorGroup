@@ -8,13 +8,16 @@
     <main class="content">
 
         <div class="project-main main">
-            <div class="main-slider anim-newSing anim-newSing--transform">
-                <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        @@include('components/cards/_project-main.html')
-                        @@include('components/cards/_project-main.html')
+            <div class="slider anim-newSing anim-newSing--transform _autoplay _loop _fade">
+                <div class="slider__wrap">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            @@include('components/cards/_project-main.html')
+                            @@include('components/cards/_project-main.html')
+                        </div>
                     </div>
                 </div>
+                <div class="swiper-pagination _custom"></div>
             </div>
 
             <div class="container">
@@ -256,27 +259,51 @@
         <div class="online-cameras m-section _last">
             <div class="container">
                 <div class="h5 m-title semi-bold-text anim-newSing anim-newSing--transform">
-                    ОНЛАЙН КАМЕРЫ
+                    ВИДЕО СТРОИТЕЛЬСТВА
                 </div>
                 <div class="cameras-slider slider anim-newSing anim-newSing--transform">
                     <div class="slider__wrap">
                         <div class="swiper-container">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                    @@include('components/cards/_camera-card.html')
+                                    @@include('components/cards/_video-card.html')
                                 </div>
                                 <div class="swiper-slide">
-                                    @@include('components/cards/_camera-card.html')
+                                    @@include('components/cards/_video-card.html')
                                 </div>
                                 <div class="swiper-slide">
-                                    @@include('components/cards/_camera-card.html')
+                                    @@include('components/cards/_video-card.html')
                                 </div>
                             </div>
                         </div>
                     </div>
                     @@include('components/ui/_swiper-nav.html')
-                    <div class="swiper-pagination"></div>
                 </div>
+                <div class="cameras-slider2 slider anim-newSing anim-newSing--transform">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="cameras-slider2__item _active">
+                                    <img src="img/camera2.svg" alt="">
+                                    <span>Камера №1</span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="cameras-slider2__item">
+                                    <img src="img/camera2.svg" alt="">
+                                    <span>Камера №2</span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="cameras-slider2__item">
+                                    <img src="img/camera2.svg" alt="">
+                                    <span>Камера №3</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="online-cameras__bottom _flex-between _mt32 _mt20-tablet anim-newSing anim-newSing--transform">
                     <a href="" class="online-cameras__link">
                         <img src="img/prev3.svg" alt="">

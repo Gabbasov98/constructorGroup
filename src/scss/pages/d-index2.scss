@@ -1,5 +1,10 @@
 .main-projects{
   overflow: hidden;
+  .arrow-btn{
+    span{
+      font-size: .875em;
+    }
+  }
 }
 
 .projects-slider{
@@ -31,6 +36,10 @@
       color: $white;
       letter-spacing: .08em;
       font-weight: 400;
+    }
+    &__link{
+      right: 2.31em;
+      bottom: 1.81em;
     }
   }
 }
@@ -105,6 +114,7 @@
       padding-right: .5em;
       width: 21.125em;
     }
+    .swiper-button,
     .swiper-nav{
       display: none;
     }

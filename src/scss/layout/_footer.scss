@@ -12,16 +12,23 @@
       display: block;
     }
   }
+  @media screen and (min-width: 993px){
+    .nav{
+      ul{
+        display: flex;
+        gap: 2.5em;
+      }
+      a{
+        font-size: 1.125em;
+      }
+    }
+  }
 }
 
 .footer-top{
   display: grid;
-  grid-template-columns: 42em calc(100% - 42em);
-  &__col2{
-    display: grid;
-    grid-template-columns: auto auto;
-    justify-content: space-between;
-  }
+  grid-template-columns: calc(100% - 19em) 17.625em;
+  justify-content: space-between;
   &__desc{
     color: #666;
   }
@@ -56,7 +63,7 @@
 
 .footer-bottom{
   gap: 1.5em;
-  margin-top: 6.375em;
+  margin-top: 5.375em;
   color: $dark;
   &__by{
     margin-left: auto;

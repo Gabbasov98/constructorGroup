@@ -1,10 +1,10 @@
 <a href="" class="project-card anim-newSing anim-newSing--transform">
     @@if(badge !== ""){
-    <div class="project-card__badge font2">
+    <div class="project-card__badge font2 @@if(badge == 'В реализации'){ _yellow}">
         <span class="text14-tablet">@@badge</span>
     </div>
     }
-    <div class="project-card__img _scale-img">
+    <div class="project-card__img _scale-img m-backdrop">
         <img src="img/@@img.webp" alt="">
     </div>
     <div class="project-card__text _mt24 _mt18-tablet">
@@ -14,5 +14,9 @@
         <div class="project-card__desc m-title">
             @@desc
         </div>
+    </div>
+    <div class="project-card__link">
+        <span>Перейти в проект</span>
+        <img src="img/arrow-right4.svg" alt="">
     </div>
 </a>

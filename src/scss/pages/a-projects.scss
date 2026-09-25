@@ -24,6 +24,9 @@
     color: $white;
     z-index: 2;
     pointer-events: none;
+    &._yellow{
+      border-color: $primary;
+    }
   }
   &__img{
     @include imgCover(75%);
@@ -38,6 +41,31 @@
     color: $gray;
     font-size: .875em;
     margin-top: .375em;
+  }
+  &__link{
+    position: absolute;
+    right: 1.5em;
+    bottom: 1.375em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    color: $white;
+    font-family: $font2;
+    transition: all .3s;
+    opacity: 0;
+    img{
+      width: 2em;
+      margin-left: 1em;
+    }
+    span{
+      font-size: 0.875em;
+      letter-spacing: .06em;
+    }
+  }
+  &:hover{
+    .project-card__link{
+      opacity: 1;
+    }
   }
 }
 
@@ -55,6 +83,9 @@
     }
     &__desc{
       font-size: .8125em;
+    }
+    &__link{
+      display: none;
     }
   }
 }

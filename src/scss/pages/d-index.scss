@@ -114,6 +114,12 @@
     }
   }
 
+  .video-slider{
+    .swiper-button{
+      display: none;
+    }
+  }
+
   .expertise{
     &__top{
       grid-template-columns: 100%;

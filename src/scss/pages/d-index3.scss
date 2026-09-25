@@ -12,8 +12,7 @@
     z-index: 3;
   }
   .slider-controls{
-    display: flex;
-    align-items: center;
+    @include center;
     gap: 1em;
   }
   .slider-arrow{

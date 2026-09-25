@@ -6,6 +6,26 @@ function Sliders() {
         slider.setAttribute("data-slider-id",index)
 
         let isLoop = slider.classList.contains("_loop")
+        let autoplay = slider.classList.contains("_autoplay")
+        let fade = slider.classList.contains("_fade")
+        let autoplayOptions = false
+        let effect = false
+        let fadeEffect = false
+
+
+        if(autoplay){
+            autoplayOptions = {
+                delay: 6000,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+            }
+        }
+        if(fade){
+            effect = 'fade'
+            fadeEffect = {
+                crossFade: true
+            }
+        }
 
         SlidersArray[index] = new Swiper(`.slider[data-slider-id="${index}"] .swiper-container`, {
             slidesPerView: "auto",
@@ -17,6 +37,9 @@ function Sliders() {
             observeParents: true,
             observeSlideChildren: true,
             loop: isLoop,
+            autoplay: autoplayOptions,
+            effect: effect,
+            fadeEffect: fadeEffect,
             navigation: {
                 nextEl: `.slider[data-slider-id="${index}"] .swiper-button-next`,
                 prevEl: `.slider[data-slider-id="${index}"] .swiper-button-prev`,
