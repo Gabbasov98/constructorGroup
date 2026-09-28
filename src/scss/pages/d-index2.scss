@@ -1,15 +1,20 @@
 .main-projects{
   overflow: hidden;
+  position: relative;
   .arrow-btn{
     span{
       font-size: .875em;
     }
+  }
+  .swiper-button._custom{
+    top: 54%;
   }
 }
 
 .projects-slider{
   padding: 0 9.375em;
   margin: 2em auto 0;
+  position: static;
   .swiper-container{
     width: calc(100% + 1.875em);
   }
