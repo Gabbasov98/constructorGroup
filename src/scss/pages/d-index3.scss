@@ -10,9 +10,13 @@
     bottom: 4em;
     width: 100%;
     z-index: 3;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .4s ease, visibility .4s;
   }
-  &._single &__nav{
-    display: none;
+  &._multi &__nav{
+    opacity: 1;
+    visibility: visible;
   }
   .slider-controls{
     @include center;
