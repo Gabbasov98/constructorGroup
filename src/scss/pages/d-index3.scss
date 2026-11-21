@@ -7,7 +7,7 @@
   &__nav{
     position: absolute;
     left: 0;
-    bottom: 4em;
+    bottom: 1.75em;
     width: 100%;
     z-index: 3;
     opacity: 0;
@@ -101,8 +101,8 @@
   &__content{
     position: absolute;
     left: 0;
-    bottom: 50%;
-    transform: translateY(90%);
+    bottom: 7.75em;
+    //transform: translateY(90%);
     width: 100%;
     opacity: 0;
     transition: opacity .8s ease .3s;
@@ -123,7 +123,7 @@
 @media screen and (max-width: 992px){
   .main-slider{
     &__nav{
-      bottom: 1.875em;
+      bottom: 1.25em;
     }
     .slider-arrow{
       width: 2.875em;
@@ -139,7 +139,7 @@
 
   .main-card{
     &__content{
-      bottom: 8.5em;
+      bottom: 4.125em;
       transform: unset;
     }
     &__text{
@@ -148,6 +148,9 @@
     }
     &__desc{
       font-size: 1.125em;
+    }
+    .h2{
+      font-size: 2.25em;
     }
   }
 }
