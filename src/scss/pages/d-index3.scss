@@ -96,7 +96,8 @@
 .main-card{
   position: relative;
   &__img{
-    @include imgCover(57.1%);
+    @include imgCover(0);
+    min-height: $vh;
   }
   &__content{
     position: absolute;
@@ -160,6 +161,7 @@
   .main-card{
     &__img{
       padding-bottom: 150%;
+      min-height: unset;
     }
   }
 }
