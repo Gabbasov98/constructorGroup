@@ -48,6 +48,20 @@
       }
     }
   }
+  &__btn{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 6.25em;
+    //background: $black;
+    z-index: 3;
+    &--prev{
+      right: 100%;
+    }
+    &--next{
+      left: 100%;
+    }
+  }
 }
 
 .history-card{
@@ -104,6 +118,7 @@
   }
 
   .history-slider{
+    &__btn,
     .swiper-nav{
       display: none;
     }

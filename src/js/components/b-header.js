@@ -23,11 +23,30 @@ function menuControl() {
 
         // Потом фиксируем
         requestAnimationFrame(() => {
-            body.classList.add("fixed-body");
             header.classList.add("_open");
+            if(window.innerWidth<=992){
+                body.classList.add("fixed-body");
+            }
         });
     } else {
         body.classList.remove("fixed-body");
         header.classList.remove("_open");
     }
 }
+
+const div = document.querySelector( '#popup');
+
+document.addEventListener( 'click', (e) => {
+    const withinBoundaries = e.composedPath().includes(header);
+
+    if ( ! withinBoundaries ) {
+        if(header.classList.contains("_open")){
+            header.classList.remove("_open")
+        }
+    }
+})
+document.addEventListener( 'scroll', (e) => {
+    if(header.classList.contains("_open")){
+        header.classList.remove("_open")
+    }
+})

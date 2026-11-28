@@ -60,6 +60,18 @@ function Sliders() {
                 }
             }
         })
+
+        if(slider.classList.contains("history-slider")){
+            let prev = document.querySelector(".history-slider__btn--prev")
+            let next = document.querySelector(".history-slider__btn--next")
+
+            prev.onmouseover = function () {
+                SlidersArray[index].slidePrev()
+            }
+            next.onmouseover = function () {
+                SlidersArray[index].slideNext()
+            }
+        }
     })
 }
 

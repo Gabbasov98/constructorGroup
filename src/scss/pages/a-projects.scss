@@ -24,8 +24,11 @@
     color: $white;
     z-index: 2;
     pointer-events: none;
+    border-radius: 62.5em;
     &._yellow{
-      border-color: $primary;
+      border-color: $dark;
+      background-color: $dark;
+      color: $white;
     }
   }
   &__img{

@@ -59,8 +59,23 @@
     }
   }
   &__contacts{
-    margin-top: auto;
-    padding-top: 1.5em;
+    &-wrap{
+      margin-top: auto;
+      padding-top: 1.5em;
+    }
+    &-nav{
+      display: flex;
+      margin-top: 1.25em;
+    }
+    &-link{
+      padding: 0 2.125em;
+      height: 2.75em;
+      border-radius: 6.25em;
+      font-weight: 600;
+      span{
+        font-size: .875em;
+      }
+    }
   }
   .swiper-slide-prev .project-main__img,
   .swiper-slide-active .project-main__img,
@@ -196,7 +211,7 @@
         font-size: .6875em;
       }
     }
-    &__contacts{
+    &__contacts-wrap{
       display: none;
     }
   }

@@ -150,10 +150,10 @@
 }
 
 .menu{
-  height: calc(100 * var(--vh) - 5.625em);
+  //height: calc(100 * var(--vh) - 5.625em);
   position: fixed;
   left: 0;
-  bottom: 0;
+  top: 5.625em;
   width: 100%;
   background-color: $white;
   opacity: 0;
@@ -165,11 +165,12 @@
   }
   &__inner{
     display: grid;
-    grid-template-columns: 18em 46.5em;
+    grid-template-columns: 11.5em calc(100% - 12.5em);
+    gap: 1em;
     justify-content: space-between;
   }
   .footer-action{
-    margin-top: 3.125em;
+    margin-top: 3.75em;
   }
   &__lang{
     margin-top: 3.125em;
@@ -182,15 +183,21 @@
   }
   &__items{
     display: grid;
-    grid-template-columns: repeat(2,calc(50% - 1.375em));
-    gap: 2.75em;
+    grid-template-columns: repeat(3,calc(100% / 3 - 4.25em / 3));
+    gap: 2.125em;
   }
   .project-card__img{
     padding-bottom: 126%;
   }
+  .project-card__link{
+    display: none;
+  }
   .nav{
+    ul{
+      gap: 1.25em;
+    }
     a{
-      font-size: 1.125em;
+      font-size: 1.25em;
     }
   }
 }
@@ -222,6 +229,7 @@
 
   .menu{
     height: calc(100 * var(--vh) - 4.25em);
+    top: 4.25em;
     &__scroll{
       padding: 2.5em 1.25em;
     }

@@ -1,8 +1,8 @@
 .footer{
   margin-top: 1em;
   &__inner{
-    padding: 5em 0 4em;
-    border-top: .25em solid $black;
+    padding: 2.5em 0;
+    border-top: 2px solid #DCDCDC;
   }
   &__logo{
     display: block;
@@ -17,6 +17,7 @@
       ul{
         display: flex;
         gap: 2.5em;
+        justify-content: center;
       }
       a{
         font-size: 1.125em;
@@ -26,9 +27,6 @@
 }
 
 .footer-top{
-  display: grid;
-  grid-template-columns: calc(100% - 19em) 17.625em;
-  justify-content: space-between;
   &__desc{
     color: #666;
   }
@@ -62,16 +60,22 @@
 }
 
 .footer-bottom{
-  gap: 1.5em;
-  margin-top: 5.375em;
+  gap: .75em 1.5em;
+  margin-top: 3.125em;
   color: $dark;
+  justify-content: center;
+  flex-wrap: wrap;
   &__by{
-    margin-left: auto;
+    width: 100%;
+    text-align: center;
   }
   &__c{
     br{
       display: none;
     }
+  }
+  .text14{
+    line-height: 171%;
   }
 }
 
@@ -80,6 +84,8 @@
     margin-top: .75em;
     &__inner{
       padding: 2.75em 0 2.25em;
+      border-width: .25em;
+      border-color: $black;
     }
     &__logo{
       width: 15.3125em;
@@ -93,14 +99,19 @@
 
   .footer-bottom{
     flex-wrap: wrap;
-    gap: .375em .75em;
-    margin-top: 3em;
+    justify-content: unset;
+    gap: 0 .75em;
+    margin-top: 2.75em;
     &__by{
-      margin: 1.375em 0 0;
+      margin: 1.25em 0 0;
       width: 100%;
+      text-align: left;
     }
     &__c{
       width: 100%;
+    }
+    .text14{
+      line-height: 150%;
     }
   }
 }
@@ -117,6 +128,9 @@
         border-bottom: $border;
         &:first-child{
           padding-top: 0;
+        }
+        &:last-child{
+          border-bottom: none;
         }
       }
     }
